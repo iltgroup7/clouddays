@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h1= title
+    p= message
+    - for(var i=0; i<5; ++i){
+        li= questions[i].text
+        label.radio-inline
+            input(type='radio', class='radioSpans', id='confidence1', value='option1', name='questions'+i)
+        span 1
+        label.radio-inline
+            input(type='radio', class='radioSpans', id='confidence2', value='option2', name='questions'+i)
+        span 2
+        label.radio-inline
+            input(type='radio', class='radioSpans', id='confidence3', value='option3', name='questions'+i)
+        span 3
+        label.radio-inline
+            input(type='radio', class='radioSpans', id='confidence4', value='option4', name='questions'+i)
+        span 4
+        label.radio-inline
+            input(type='radio', class='radioSpans', id='confidence5', value='option5', name='questions'+i)
+        span 5 
+    - }
+    br
+    br
+    button(type="submit") Submit
+    
+    

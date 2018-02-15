@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1= title
+    p= message
+    select #(name="teams")
+        - for(var i=0; i<2; ++i){
+            option(value="users["+i+"].id")= users[i].name
+        - }
+    br
+    br
+    a(href="/members") Next
+    
+    

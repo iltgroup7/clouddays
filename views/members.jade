@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1= title
+    p= message
+    select #(name="members")
+        - for(var i=0; i<3; ++i){
+            option(value="members[i].name")= members[i].name
+        - }
+    br
+    br
+    a(href="/questions") Next
+    
+    
